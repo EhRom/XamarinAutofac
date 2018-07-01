@@ -1,14 +1,16 @@
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinAutofac.XApp.Business.Cqrs;
 
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XamarinAutofac.XApp
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
 		public App ()
 		{
+            var startupConfiguration = new StartupConfiguration();
+
 			InitializeComponent();
 
 			MainPage = new MainPage();
